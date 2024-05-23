@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Navbar.css"
 
 export const Navbar = ({ onSearch }) => {
   const [input, setInput] = useState("");
@@ -14,7 +15,7 @@ export const Navbar = ({ onSearch }) => {
 
   return (
     <nav className="navbar">
-      <form onSubmit={handleSubmit}>
+      <form className="input-form" onSubmit={handleSubmit}>
         <input type="text" value={input} onChange={handleChange} />
         <button type="submit">Search</button>
       </form>
