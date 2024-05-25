@@ -14,7 +14,7 @@ export const searchMovie = async (searchTerm) => {
 };
 export const searchTitle = async (id) => {
   try {
-    const response = await fetch(`${URL}&i=${id}&plot=short`);
+    const response = await fetch(`${URL}&i=${id}&plot=full`);
     const data = await response.json();
     console.log(data);
     return data;
