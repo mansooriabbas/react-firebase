@@ -12,5 +12,17 @@ export const searchMovie = async (searchTerm) => {
     return [];
   }
 };
+export const searchTitle = async (id) => {
+  try {
+    const response = await fetch(`${URL}&i=${id}&plot=short`);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
+};
 
-export default { searchMovie };
+
+export default { searchMovie, searchTitle };
